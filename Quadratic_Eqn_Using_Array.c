@@ -36,6 +36,7 @@ int output(float c[], float determinent)
 int main()
 {
     float e[3],determinent;
+    
     input(e);
     compute(e,&determinent);
     output(e,determinent);
