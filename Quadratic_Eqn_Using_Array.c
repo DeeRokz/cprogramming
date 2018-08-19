@@ -40,4 +40,5 @@ int main()
     input(e);
     compute(e,&determinent);
     output(e,determinent);
+    return 0;
 }
