@@ -32,17 +32,14 @@ int output(float c[], int f,float alfa1,float beta1)
     
     if(f==0)
      {
-        printf("\nRoots Are Equal : ALPHA=BETA=%f",-c[1]/(2*c[0])
-             );
+        printf("\nRoots Are Equal : ALPHA=BETA=%f",alfa1);
      }
-    else if(determinent<0)
+    else if(f==1)
      {
         printf("\nComplex Roots");
      }
     else
      {
-        alfa1=(-c[1]+sqrt(determinent))/(2*c[0]);
-        beta1=(-c[1]-sqrt(determinent))/(2*c[0]);
         printf("\n\n Alpha = %f\n Beta=%f\n",alfa1,beta1);
      }
 }
