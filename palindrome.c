@@ -24,7 +24,7 @@ void reverse(int num, int *reversed)
 void input(int *num)
 {
  printf("Enter the number : ");
- scanf("%d", &*num);
+ scanf("%d", num);
 }
 
 void main()
