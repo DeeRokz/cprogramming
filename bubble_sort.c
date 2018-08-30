@@ -1,47 +1,62 @@
 #include<stdio.h>
 
-void output(int elements[],int noofelements)
+void output(int e[],int n)
 {
   printf("Sorted Array : \n");
-  for(int i=0;i<noofelements;i++)
-   printf("%d ", elements[i]);
+  for(int i=0;i<n;i++)
+   printf("%d ", e[i]);
 }
 
-void bubble_sort(int elements[],int noofelements)
+void bubble_sort(int e[],int n)
 {
   int temp;
    
-  for(int i=noofelements-2;i>=0;i--)
+  for(int i=n-2;i>=0;i--)
    for(int j=0;j<=i;j++)
-    if(elements[j]>elements[j+1])
+    if(e[j]>e[j+1])
      {
-       temp=elements[j];
-       elements[j]=elements[j+1];
-       elements[j+1]=temp;
+       temp=e[j];
+       e[j]=e[j+1];
+       e[j+1]=temp;
      }
 
-  output(elements,noofelements);
 }
 
-void input()
+void input(int *n, int e[])
 {
 
- int noofelements; // noofelements represents 'Number of elements'
-
  printf("Enter the number of elements you are going to use : ");
- scanf("%d", &noofelements);
- 
- int elements[noofelements];
- 
- printf("Enter the %d Elements : ", noofelements);
- for(int i=0;i<noofelements;i++)
-  scanf("%d", &elements[i]);
-
- bubble_sort(elements,noofelements);
+ scanf("%d", n);
+  
+ printf("Enter the %d Elements : ", *n);
+ for(int i=0;i<*n;i++)
+  scanf("%d", &e[i]);
 
 }
 
 void main()
 {
- input(); 
+ int n, e[50];
+ input(&n,e); 
+ bubble_sort(e,n);
+ output(e,n);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
