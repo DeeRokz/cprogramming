@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void print_grade(int marks)
+void print_grade(float marks)
 {
   if(marks>=95)
    printf("Grade = A1");
@@ -22,19 +22,17 @@ void print_grade(int marks)
    printf("Grade = E1 (Fail)");
 }
 
-void input()
+void input(float *marks)
 {
 
-  int marks;
   printf("Enter the Marks : ");
-  scanf("%d", &marks);
-  
-  print_grade(marks);
+  scanf("%f", marks);
 
 }
 
 void main()
 {
- input();
+ float marks;
+ input(&marks);
+ print_grade(marks);
 }
-
