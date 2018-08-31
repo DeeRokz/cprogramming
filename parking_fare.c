@@ -14,7 +14,7 @@ void get_fare(char vehicle, int hours, int *fare)
  if(vehicle=='c'||vehicle=='C')
   {
    if(hours<=2)
-    *fare=20*2;
+    *fare=20*hours;
    else if(hours>2)
     *fare=(20*2)+(30*(hours-2));
   }
@@ -22,7 +22,7 @@ void get_fare(char vehicle, int hours, int *fare)
  else if(vehicle=='b'||vehicle=='B')
   {
    if(hours<=4)
-    *fare=40*4;
+    *fare=40*hours;
    else if(hours>4)
     *fare=(40*4)+(50*(hours-4));
   } 
@@ -30,7 +30,7 @@ void get_fare(char vehicle, int hours, int *fare)
  else if(vehicle=='t'||vehicle=='T')
   {
    if(hours<=3)
-    *fare=30*3;
+    *fare=30*hours;
    else if(hours>4)
     *fare=(30*3)+(40*(hours-3));
   } 
