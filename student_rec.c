@@ -5,9 +5,9 @@ struct student
  int roll_no;
  float marks;
  char name[30], dept[30], grade[3];
-}std[10];
+};
 
-void add_rec()
+void add_rec(struct student std[])
 {
  int n; 
 
@@ -31,7 +31,7 @@ void add_rec()
  }
 }
 
-void search_rec()
+void search_rec(struct student std[])
 {
  int roll;
  printf("\nEnter the roll no to begin searching : ");
@@ -53,6 +53,7 @@ void search_rec()
 void main()
 {
  int choice;
+ struct student std[10];
  do
  {
   printf("\n\n\nMain Menu");
@@ -64,9 +65,9 @@ void main()
   
   switch(choice)
   {
-   case 1 : add_rec();
+   case 1 : add_rec(std);
             break;
-   case 2 : search_rec();
+   case 2 : search_rec(std);
             break;
    case 3 : break; 
   }
